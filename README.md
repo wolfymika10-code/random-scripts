@@ -17,7 +17,7 @@ I sometimes make server side requires that you can pop into your games.
 Most of my scripts dont use Gui, check documentation to see the keybinds.
 
 ### I got a problem with my script.
-Post it in the Issues thing and I'll try to get it fixed ASAP. ~As a reminder, it's just me working on it! + I'm a novice programmer after all~
+Post it in the Issues thing and I'll try to get it fixed ASAP. <sub>As a reminder, it's just me working on it! + I'm a novice programmer after all</sub>
 
 ## DOCUMENTATION:
 
