@@ -46,7 +46,8 @@ Keybinds:
 - U : Toggle BodyGyro, making them upright
 
 loadstring:
-`loadstring(game:HttpGet(https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/unanchored.luau))()`
+
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/unanchored.luau"))()`
 
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/2026771435/profile)
