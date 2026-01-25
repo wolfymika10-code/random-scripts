@@ -24,10 +24,11 @@ as more scripts get added this list will get longer!
 _TIP: find your optimal script by using Crtl+F and the tagging system!_
 
 - replicates : replicates from client to server automatically
-- universal : it works anywhere
+- universal : it works without uNC or whatever its called
 - client : runs on the client
 - server : runs on the server
 - require : require() to use
+- reanimate : animator
 - loadstring : loadstring() to use
 
 # DOCUMENTATION:
@@ -48,6 +49,20 @@ Keybinds:
 loadstring:
 
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/unanchored.luau"))()`
+
+## Revolver RE-ANIM
+Tags : server require reanimate
+
+**THIS SCRIPT ONLY RUNS ON THE SERVER**
+This script gives you a revolver and retro animations!
+*TIP: uhhh aim good and you'll be fine*
+
+Keybinds:
+- Q : Show revolver
+-   E : Change methods.
+
+require:
+`require(91624418241113).load("username")` replace username with your username (duh)
 
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/2026771435/profile)
