@@ -23,12 +23,13 @@ Post it in the Issues thing and I'll try to get it fixed ASAP. _<sub>As a remind
 as more scripts get added this list will get longer!
 _TIP: find your optimal script by using Crtl+F and the tagging system!_
 
-- replicates : replicates from client to server automatically
+- replicates : replicates from client to server using some sort of method
 - universal : it works without uNC or whatever its called
 - client : runs on the client
+- gui : has a gui
 - server : runs on the server
 - require : require() to use
-- reanimate : animator
+- reanimate : some sort of animator
 - loadstring : loadstring() to use
 
 # DOCUMENTATION:
@@ -47,7 +48,6 @@ Keybinds:
 - U : Toggle BodyGyro, making them upright
 
 loadstring:
-
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/unanchored.luau"))()`
 
 ## Revolver RE-ANIM
@@ -64,5 +64,27 @@ Keybinds:
 require:
 `require(91624418241113).load("username")` replace username with your username (duh)
 
+## shirtpeek.luau
+Tags : universal client gui loadstring
+
+-# i was too lazy to search on scriptblox so i made one myself
+This script allows you to peek shirt and pants id's!
+
+Keybinds:
+- P : Toggle UI
+-   MouseButton1 : Select a player
+
+loadstring:
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/shirtpeek.luau"))()`
+
+## safechat.luau
+Tags : universal client gui loadstring
+
+This script revives the Super Safe Chat!
+RIP 2007-2014 </3
+
+loadstring:
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/safechat/safechat.luau"))()`
+
 ## Cool links.
-[![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/2026771435/profile)
+[![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/10556226130/profile)
