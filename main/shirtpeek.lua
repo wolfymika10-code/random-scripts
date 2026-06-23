@@ -28,7 +28,7 @@ local function buildUI()
 
 	View = Instance.new("ImageLabel")
 	View.Name = "View"
-	View.Size = UDim2.new(0.2916359, 0, 0.573041, 0)
+	View.Size = UDim2.new(0.2916359, 0, 0.9, 0)
 	View.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	View.BackgroundTransparency = 1
 	View.Position = UDim2.new(0.0218134, 0, 0.021333, 0)
@@ -43,7 +43,7 @@ local function buildUI()
 
 	Id = Instance.new("TextBox")
 	Id.Name = "Id"
-	Id.Size = UDim2.new(0.67, 0, 0.57, 0)
+	Id.Size = UDim2.new(0.67, 0, 0.9, 0)
 	Id.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Id.BackgroundTransparency = 1
 	Id.Position = UDim2.new(0.3134494, 0, 0.0150086, 0)
@@ -56,7 +56,8 @@ local function buildUI()
 	Id.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Id.PlaceholderText = "ID goes here on selection"
 	Id.Text = ""
-	Id.TextEditable = false
+	Id.TextEditable = true
+	Id.ClearTextOnFocus = false
 	Id.CursorPosition = -1
 	Id.Font = Enum.Font.SourceSans
 	Id.TextScaled = true
@@ -74,7 +75,7 @@ local function buildUI()
 
 	Id1 = Instance.new("TextBox")
 	Id1.Name = "Id"
-	Id1.Size = UDim2.new(0.67, 0, 0.57, 0)
+	Id1.Size = UDim2.new(0.67, 0, 0.9, 0)
 	Id1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Id1.BackgroundTransparency = 1
 	Id1.Position = UDim2.new(0.3134494, 0, 0.0150086, 0)
@@ -87,7 +88,8 @@ local function buildUI()
 	Id1.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Id1.PlaceholderText = "ID goes here on selection"
 	Id1.Text = ""
-	Id1.TextEditable = false
+	Id1.TextEditable = true
+	Id1.ClearTextOnFocus = false
 	Id1.CursorPosition = -1
 	Id1.Font = Enum.Font.SourceSans
 	Id1.TextScaled = true
@@ -96,7 +98,7 @@ local function buildUI()
 
 	View1 = Instance.new("ImageLabel")
 	View1.Name = "View"
-	View1.Size = UDim2.new(0.2916359, 0, 0.573041, 0)
+	View1.Size = UDim2.new(0.2916359, 0, 0.9, 0)
 	View1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	View1.BackgroundTransparency = 1
 	View1.Position = UDim2.new(0.0218134, 0, 0.021333, 0)
