@@ -24,7 +24,7 @@ as more scripts get added this list will get longer!
 _TIP: find your optimal script by using Crtl+F and the tagging system!_
 
 - replicates : replicates from client to server using some sort of method
-- universal : it works without uNC or whatever its called
+- universal : it works without exploit functions
 - client : runs on the client
 - gui : has a gui
 - server : runs on the server
@@ -48,6 +48,7 @@ Keybinds:
 - U : Toggle BodyGyro, making them upright
 
 loadstring:
+
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/unanchored.luau"))()`
 
 ## Revolver RE-ANIM
@@ -62,9 +63,10 @@ Keybinds:
 -   E : Change methods.
 
 require:
+
 `require(91624418241113).load("username")` replace username with your username (duh)
 
-## shirtpeek.luau
+## shirtpeek.lua
 Tags : universal client gui loadstring
 
 -# i was too lazy to search on scriptblox so i made one myself
@@ -75,6 +77,7 @@ Keybinds:
 -   MouseButton1 : Select a player
 
 loadstring:
+
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/shirtpeek.luau"))()`
 
 ## safechat.luau
@@ -84,7 +87,20 @@ This script revives the Super Safe Chat!
 RIP 2007-2014 </3
 
 loadstring:
+
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/safechat/safechat.luau"))()`
+
+## desync.luau
+Tags : universal client gui loadstring
+
+A desync script that does not use raknet
+
+Keybinds:
+- F : Toggle Desync
+
+loadstring:
+
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/desync.luau"))()`
 
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/10556226130/profile)
