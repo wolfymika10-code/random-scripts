@@ -277,6 +277,12 @@ function createRig()
 	return a
 end
 
+function clearanimations(animator)
+	for i,v in pairs(animator:GetPlayingAnimationTracks()) do
+		v:Stop()
+	end
+end
+
 function fixcam(speaker)
 	workspace.CurrentCamera:remove()
 	wait(.1)
@@ -388,8 +394,8 @@ function invisible(args, speaker)
 	InvisibleCharacter.Humanoid.RootPart.CFrame = CF_1
 	Player.Character = InvisibleCharacter
 	fixcam(Player)
-	Player.Character.Animate.Disabled = true
-	Player.Character.Animate.Disabled = false
+	--Player.Character.Animate.Disabled = true
+	--Player.Character.Animate.Disabled = false
 
 	function TurnVisible()
 		if IsInvis == false then return end
@@ -404,13 +410,15 @@ function invisible(args, speaker)
 		Player.Character = Character
 		Character.Parent = workspace
 		IsInvis = false
-		Player.Character.Animate.Disabled = true
-		Player.Character.Animate.Disabled = false
+		--Player.Character.Animate.Disabled = true
+		--Player.Character.Animate.Disabled = false
 		invisDied = Character:FindFirstChildOfClass'Humanoid'.Died:Connect(function()
 			Respawn()
 			invisDied:Disconnect()
 		end)
 		invisRunning = false
+		wait(.1)
+		clearanimations(Player.Character.Humanoid.Animator)
 	end
 end
 
