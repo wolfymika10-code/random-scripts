@@ -23,7 +23,7 @@ Post it in the Issues thing and I'll try to get it fixed ASAP. _<sub>As a remind
 as more scripts get added this list will get longer!
 _TIP: find your optimal script by using Crtl+F and the tagging system!_
 
-- replicates : replicates from client to server using some sort of method
+- replicates : other people can see it
 - universal : it works without exploit functions
 - client : runs on the client
 - gui : has a gui
@@ -31,11 +31,13 @@ _TIP: find your optimal script by using Crtl+F and the tagging system!_
 - require : require() to use
 - reanimate : some sort of animator
 - loadstring : loadstring() to use
+- physics : physics baced script
+- mobile : works on moible
 
 # DOCUMENTATION:
 
 ## unanchored.luau
-Tags : universal client loadstring
+Tags : universal client loadstring physics replicates
 
 This a script that allows you to drag unachored parts anywhere, ***drag anarchy where ever you go!***
 *TIP: get close to unachored parts to make the server trust you!*
@@ -91,9 +93,9 @@ loadstring:
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/safechat/safechat.luau"))()`
 
 ## desync.luau
-Tags : universal client gui loadstring
+Tags : universal client gui loadstring mobile
 
-A desync script that does not use raknet
+A desync script that does not use raknet (im pretty sure its broken)
 
 Keybinds:
 - F : Toggle Desync
@@ -101,6 +103,20 @@ Keybinds:
 loadstring:
 
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/desync.luau"))()`
+
+## bhop.luau
+Tags : universal client loadstring physics
+
+script that lets you bhop AND surf!
+you must shiftlock while bhop is active!
+
+Keybinds:
+- T : Toggle Bunny Hopping
+- R : Toggle Lock Mouse in the middle of the screen (NOT SHIFTLOCK)
+
+loadstring:
+
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/bhop.luau"))()`
 
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/10556226130/profile)
