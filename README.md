@@ -80,7 +80,7 @@ Keybinds:
 
 loadstring:
 
-`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/shirtpeek.luau"))()`
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/shirtpeek.lua"))()`
 
 ## safechat.luau
 Tags : universal client gui loadstring
@@ -117,6 +117,20 @@ Keybinds:
 loadstring:
 
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/bhop.luau"))()`
+
+## boombox-steal.lua
+Tags : client gui loadstring
+
+-# this is made for Free Boombox/Radio game but may work in others
+allows you to see what audios others are playing on their boombox + the option to download them!
+
+Keybinds:
+- P : Toggle UI
+-   MouseButton1 : Select a player
+
+loadstring:
+
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/boombox-steal.lua"))()`
 
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/10556226130/profile)
