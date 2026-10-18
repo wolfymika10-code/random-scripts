@@ -132,5 +132,17 @@ loadstring:
 
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/boombox-steal.lua"))()`
 
+## 2013-animatior.luau
+Tags : client loadstring
+
+VERY simple script that gives you 2013 animations! chat `/dance` to do the old dance!
+
+Keybinds:
+- None.
+
+loadstring:
+
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/2013-animaior.luau"))()`
+
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/10556226130/profile)
