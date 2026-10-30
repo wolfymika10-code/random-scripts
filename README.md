@@ -137,6 +137,8 @@ Tags : client loadstring
 
 VERY simple script that gives you 2013 animations! chat `/dance` to do the old dance!
 
+[![Reviewed on ScriptBlox](https://scriptblox.com/badge/Universal-Script-2013-Animator-232253)](https://scriptblox.com/script/Universal-Script-2013-Animator-232253)
+
 Keybinds:
 - None.
 
