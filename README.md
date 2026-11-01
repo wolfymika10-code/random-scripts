@@ -146,5 +146,17 @@ loadstring:
 
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/2013-animaior.luau"))()`
 
+## no-bullshit-freecam.luau
+Tags : client loadstring
+
+as the title says, a freecam scripts that gives you a tool to enable/disable freecam. thats litrally it.
+
+Keybinds:
+- None.
+
+loadstring:
+
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/no-bullshit-freecam.luau"))()`
+
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/10556226130/profile)
