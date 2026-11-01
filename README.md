@@ -42,6 +42,9 @@ Tags : universal client loadstring physics replicates
 This a script that allows you to drag unachored parts anywhere, ***drag anarchy where ever you go!***
 *TIP: get close to unachored parts to make the server trust you!*
 
+### !!!Heads Up!!!
+Roblox plans on releasing Server Authority, which may make this script invalid/broken. :'C
+
 Keybinds:
 - R : Find parts
 - LMB : Drag part
