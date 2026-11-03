@@ -938,12 +938,21 @@ local function sendChat(message)
     end
 end
 
+--edit
+local sus, result = pcall(function()
+    return gethui()
+end)
+
 -- Create ScreenGui and UI root
-local playerGui = LocalPlayer:WaitForChild("PlayerGui")
+local coreGui = game:GetService("CoreGui")
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "SafeChatMenu"
 screenGui.ResetOnSpawn = false
-screenGui.Parent = playerGui
+if sus then
+	screenGui.Parent = gethui()
+else
+	screenGui.Parent = coreGui
+end
 
 -- Hide on touch devices
 if UserInputService.TouchEnabled then
