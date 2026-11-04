@@ -1,0 +1,32 @@
+{
+    "Lua.diagnostics.globals": [
+        "Instance",
+        "UDim2",
+        "Color3",
+        "Vector3",
+        "CFrame",
+        "Enum",
+        "TweenInfo",
+        "game",
+        "workspace",
+        "script",
+        "require",
+        "print",
+        "warn",
+        "error",
+        "tick",
+        "wait",
+        "math",
+        "string",
+        "table",
+        "Vector2",
+        "Ray",
+        "BrickColor",
+        "NumberSequence"
+    ],
+    "Lua.diagnostics.disable": [
+        "inject-field",
+        "need-check-nil",
+        "undefined-field"
+    ]
+}
