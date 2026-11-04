@@ -1,3 +1,5 @@
+---@diagnostic disable
+
 local ShirtStealerUI,MainFrame,Shirt,View,Id,Pants,Id1,View1,SelectionBox,DownloadButton
 
 --booxbox stealer modded from shirtstealer

@@ -22,11 +22,15 @@
         "Vector2",
         "Ray",
         "BrickColor",
-        "NumberSequence"
+        "NumberSequence",
+        "makefolder",
+        "isfolder",
+        "canwrite"
     ],
     "Lua.diagnostics.disable": [
         "inject-field",
         "need-check-nil",
-        "undefined-field"
+        "undefined-field",
+        "deprecated"
     ]
 }
