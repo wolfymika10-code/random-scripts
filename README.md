@@ -154,6 +154,8 @@ Tags : client loadstring
 
 as the title says, a freecam scripts that gives you a tool to enable/disable freecam. thats litrally it.
 
+[![Reviewed on ScriptBlox](https://scriptblox.com/badge/Universal-Script-No-BS-Freecam-234673)](https://scriptblox.com/script/Universal-Script-No-BS-Freecam-234673)
+
 Keybinds:
 - None.
 
