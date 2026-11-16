@@ -31,14 +31,14 @@ function init(p1, p2, p3) -- line: 42
         forward = 0,
         side = 0
     }
-    v10 = 12500
+    v10 = 1000
     v11 = 8
-    v12 = 250
-    v13 = 20
+    v12 = 200
+    v13 = 15
     v14 = 10
     v15 = 3
     v16 = 0.5
-    v17 = 52.5
+    v17 = 24
     v18 = 4E+05
     v19 = 3E+05
     v20 = 0.6
@@ -121,7 +121,16 @@ function findCollisionRay() -- line: 130
     local t8 = {}
 
     for i = 1, #t7 do
-        local v40, v41, v42 = game.Workspace:FindPartOnRayWithIgnoreList(t7[i], t6)
+        print("Ray:", typeof(t7[i]), t7[i])
+        print("Ignore list:", typeof(t6), #t6)
+
+        for index, object in ipairs(t6) do
+            print(index, typeof(object), object.ClassName)
+        end
+        local v40, v41, v42 = workspace:FindPartOnRayWithIgnoreList(
+            t7[i],
+            {Character}
+        )
 
         if v40 == nil then
             v41 = Vector3.new(0, -3E+06, 0)
@@ -193,7 +202,7 @@ function jump() -- line: 183
     local v49 = v17
 
     HumanoidRootPart2.Velocity = Vector3.new(x, v49, HumanoidRootPart.Velocity.z)
-    game:GetService("SoundService").jump:Play()
+    --game:GetService("SoundService").jump:Play()
     air()
 end
 
