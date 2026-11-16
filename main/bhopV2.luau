@@ -1,3 +1,6 @@
+-- YES THIS SCRIPT IS DECOMPILED
+-- NO I DIDNT STEAL IT FROM SOMEONE ELSES GAME THIS IS FROM ONE OF MY OLDER GAMES ON AN ACCOUNT I DONT HAVE ACSESS TO ANYMORE
+
 -- Saved by UniversalSynSaveInstance (Join to Copy Games) https://discord.gg/wx4ThpAsmw
 
 -- https://lua.expert
@@ -356,10 +359,12 @@ function setDeltaTime() -- line: 337
     v76 = v77
 end
 
-function updateLoop() -- line: 346
-    -- upvalues: n3 (ref)
-    setDeltaTime()
-    update(n3)
+local RunService = game:GetService("RunService")
+
+function updateLoop(deltaTime)
+    update(deltaTime)
 end
+
+RunService:BindToRenderStep("updateLoop", 1, updateLoop)
 
 main()
