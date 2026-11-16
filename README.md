@@ -91,6 +91,8 @@ Tags : universal client gui loadstring
 This script revives the Super Safe Chat!
 RIP 2007-2014 </3
 
+[![Reviewed on ScriptBlox](https://scriptblox.com/badge/Universal-Script-SafeChat-234900)](https://scriptblox.com/script/Universal-Script-SafeChat-234900)
+
 loadstring:
 
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/safechat/safechat.luau"))()`
@@ -162,6 +164,19 @@ Keybinds:
 loadstring:
 
 `loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/no-bullshit-freecam.luau"))()`
+
+
+## bhopV2.luau
+Tags : client loadstring replicates
+
+better version but idk how it works
+
+Keybinds:
+- None.
+
+loadstring:
+
+`loadstring(game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/main/bhopV2.luau"))()`
 
 ## Cool links.
 [![Roblox](icons/roblox2.svg)](https://www.roblox.com/users/10556226130/profile)
