@@ -1,0 +1,1 @@
+This folder will contain assets and items for my infinite yield plugin I'm working on.
