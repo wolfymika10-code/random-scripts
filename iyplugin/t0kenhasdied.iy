@@ -1,0 +1,115 @@
+do v=0 end
+-- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
+-- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
+-- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
+-- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
+-- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
+-- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
+-- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
+
+-- note to self: i coded this last night on half a prayer,
+-- so shit may get serious. please refine code tomorrow
+
+-- this is a (virtual) MODULE script
+
+-- notes and shieeet:
+-- 
+-- r11 = 0.3
+
+local leakifyconnection : RBXScriptSignal? = nil
+
+local function liveleakify(args, speaker)
+    local hui = gethui() -- not gonna pcall this because most normal exps have hui
+
+    local function hwenTheGui()
+        local ui = Instance.new("ScreenGui")
+        ui.Name = "only sigma hackers can read this B)"
+        ui.Parent = hui
+        ui.ResetOnSpawn = false
+
+        local img = Instance.new("ImageLabel", ui)
+        img.Image = "rbxassetid://130901207917297" -- public asset, praying it wont go
+        img.Size = Udim2.new(0.25, 0, 0.35, 0) -- unchecked scales
+    end
+
+    hwenTheGui()
+
+    local Run = game:GetService("RunService")
+
+    local Cam = game.Workspace.Camera
+    local MAGIC_FORMULA = CFrame.new(0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0, 1)
+
+    Run.RenderStepped:Connect(function()
+        if not hui:FindFirstChild("only sigma hackers can read this B)") then
+            hwenTheGui()
+        end
+        Cam.CFrame = Cam.CFrame * MAGICFORMULA
+    end)
+end
+
+local function unleakify(args, speaker)
+    if leakifyconnection then
+        leakifyconnection:Disconnect()
+    end
+    if gethui():FindFirstChild("only sigma hackers can read this B)") then
+        gethui():FindFirstChild("only sigma hackers can read this B)"):Destroy()
+    end
+    workspace.CurrentCamera.CFrame = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end
+
+local function UPDATE()
+    -- please work on this tomorrow i beg you
+    local updatestatus = nil
+    local reason = nil
+
+    if updatestatus == "fetched"
+        -- compare version logic here, probably read fetched code from github...
+        -- ...and get the first line, string splitted by spaces, get the...
+        -- ...second value and remove the first two characters to get the..
+        -- ...final, compareable version (that was a mouthful).
+
+        local needsupdate = nil
+        
+        if needsupdate then
+            -- writefile logic goes here
+            local writefilesuccess = nil
+            local failreason = nil
+            if writefilesuccess then
+                notify("Dumped plugin to disc successfully, attempting reload...")
+                execCmd("reloadplugin t0kenhasdied")
+            else
+                notify("writefile failed :( heres what we know: " .. failreason)
+        else
+            notify("No updates needed!")
+        end
+    elseif updatestatus == "failed" then
+        notify("Fatal error: " .. reason)
+    end
+end
+
+local Plugin = {
+    ["PluginName"] = "t0kens' stuff",
+    ["PluginDescription"] = "useless stuf why are u using this",
+    ["Commands"] = {
+        ["liveleak"] = {
+            ["Listname"] = "liveleak / leakify",
+            ["Description"] = "live leak real???!",
+            ["Aliases"] = {"leakify"},
+            ["Function"] = liveleakify
+        },
+        ["unliveleak"] = {
+            ["Listname"] = "unliveleak / unleakify",
+            ["Description"] = "liveleak shutdown",
+            ["Aliases"] = {"unleakify"},
+            ["Function"] = liveleakify
+        },
+        ["update"] = {
+            ["Listname"] = "update / upd",
+            ["Description"] = "checks, fetches, and dumps any new updates",
+            ["Aliases"] = {"upd"},
+            ["Function"] = UPDATE
+        },
+    }
+}
+
+return Plugin
