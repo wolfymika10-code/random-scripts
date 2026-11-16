@@ -5,7 +5,9 @@
 
 -- https://lua.expert
 
-task.wait(5)
+local update
+local setDeltaTime
+local updateLoop
 
 local v1, Character, v2, v3, HumanoidRootPart, v4, v5, v6, t1
 local n1 = 0.016666666666666666
@@ -65,7 +67,7 @@ function initBodyMovers() -- line: 73
     BodyForce.force = Vector3.new(0, (1 - v25) * 196.2, 0) * getCharacterMass()
 end
 
-function update(p4) -- line: 92
+update = function(p4) -- line: 92
     -- upvalues: v3 (ref), HumanoidRootPart (ref), v4 (ref), v5 (ref), v6 (ref), n1 (ref), v7 (ref), v8 (ref), v9 (ref), lookVector (ref)
     n1 = p4
     updateMoveInputSum()
@@ -351,7 +353,7 @@ end
 local v76
 local n3 = 0.016666666666666666
 
-function setDeltaTime() -- line: 337
+setDeltaTime = function() -- line: 337
     -- upvalues: v76 (ref), n3 (ref)
     local v77 = tick()
 
@@ -361,7 +363,7 @@ end
 
 local RunService = game:GetService("RunService")
 
-function updateLoop(deltaTime)
+updateLoop = function(deltaTime)
     update(deltaTime)
 end
 
