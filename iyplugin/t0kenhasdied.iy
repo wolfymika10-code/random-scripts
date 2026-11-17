@@ -140,7 +140,7 @@ local function downloadAsset(args, speaker)
         nofity("no writefile", "Your executor enviroment does not support the writefile function")
         return
     else
-        writefile("t0kenhasdied.iy", game:HttpGet(url))
+        writefile(name, game:HttpGet(url))
     end
 end
 
@@ -149,7 +149,7 @@ local Plugin = {
     ["PluginDescription"] = "useless stuf why are u using this",
     ["Commands"] = {
         ["liveleak"] = {
-            ["Listname"] = "liveleak / leakify",
+            ["Listname"] = "liveleak",
             ["Description"] = "live leak real???!",
             ["Aliases"] = {"leakify"},
             ["Function"] = liveleakify
@@ -161,11 +161,17 @@ local Plugin = {
             ["Function"] = liveleakify
         },
         ["update"] = {
-            ["Listname"] = "update / upd",
+            ["Listname"] = "update",
             ["Description"] = "checks, fetches, and dumps any new updates",
             ["Aliases"] = {"upd"},
             ["Function"] = UPDATE
         },
+        ["download"] = {
+            ["Listname"] = "download [filename] [url]",
+            ["Description"] = "downloads assets straight into your workspace folder (good for music, make sure to add the file extention",
+            ["Aliases"] = {"dwnld"},
+            ["Function"] = downloadAsset
+        }
     }
 }
 
