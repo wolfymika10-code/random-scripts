@@ -2,18 +2,18 @@ local function notify(messsage, parent)
     local StarterGui = game:GetService("StarterGui")
     
     StarterGui:SetCore("SendNotification", {
-      Title = message,
+      Title = messsage,
       Text = parent,
       Duration = 5,
     })
 end
 
 local ok = pcall(function()
-      return writefile()
+      return writefile("placeholder you can delete", "TEST")
 end)
 
 if not ok then
-    nofity("no writefile", "Your executor enviroment does not support the writefile function")
+    notify("no writefile", "Your executor enviroment does not support the writefile function")
     return
 end
 
