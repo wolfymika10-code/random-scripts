@@ -8,7 +8,7 @@ local function notify(messsage, parent)
     })
 end
 
-local ok = pcall(function(
+local ok = pcall(function()
       return writefile()
 end)
 
@@ -17,7 +17,7 @@ if not ok then
     return
 end
 
-local ok, content = pcall(function(
+local ok, content = pcall(function()
       return game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/iyplugin/t0kenhasdied.iy")
 end)
 
@@ -26,7 +26,7 @@ if not ok then
     return
 end
 
-local ok, reason = pcall(function(
+local ok, reason = pcall(function()
       return writefile("t0kenhasdied.iy", content)
 end)
 
