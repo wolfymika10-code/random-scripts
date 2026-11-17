@@ -1,4 +1,4 @@
-local pluginversion=0
+local pluginversion=1
 -- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
 -- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
 -- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
@@ -25,7 +25,9 @@ local function liveleakify(args, speaker)
 
         local img = Instance.new("ImageLabel", ui)
         img.Image = "rbxassetid://130901207917297" -- public asset, praying it wont go
-        img.Size = Udim2.new(0.25, 0, 0.35, 0) -- unchecked scales
+        img.Size = UDim2.new(0.25, 0, 0.35, 0) -- unchecked scales
+
+        return ui
     end
 
     hwenTheGui()
@@ -39,7 +41,7 @@ local function liveleakify(args, speaker)
         if not hui:FindFirstChild("only sigma hackers can read this B)") then
             hwenTheGui()
         end
-        Cam.CFrame = Cam.CFrame * MAGICFORMULA
+        Cam.CFrame = Cam.CFrame * MAGIC_FORMULA
     end)
 end
 
