@@ -7,14 +7,10 @@ local pluginversion=0
 -- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
 -- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
 
--- note to self: i coded this last night on half a prayer,
--- so shit may get serious. please refine code tomorrow
-
 -- this is a (virtual) MODULE script
 
 -- notes and shieeet:
--- 
--- r11 = 0.3
+-- none rn
 
 local leakifyconnection : RBXScriptSignal? = nil
 
@@ -58,32 +54,69 @@ local function unleakify(args, speaker)
 end
 
 local function UPDATE()
-    -- please work on this tomorrow i beg you
+    -- please work on this tomorrow i beg you ( i did !!!)
     local updatestatus = nil
     local reason = nil
 
-    if updatestatus == "fetched"
+    local ok, content = pcall(function()
+         return game:HttpGet("https://raw.githubusercontent.com/wolfymika10-code/random-scripts/refs/heads/main/iyplugin/t0kenhasdied.iy")
+    end)
+
+    if ok then
+        updatestatus = "fetched"
+    else
+        updatestatus = "failed"
+        reason = content
+    end
+
+    if updatestatus == "fetched" then
         -- compare version logic here, probably read fetched code from github...
         -- ...and get the first line, string splitted by spaces, get the...
         -- ...second value and remove the first two characters to get the..
         -- ...final, compareable version (that was a mouthful).
 
+        -- changed it a bit but its got the same idea really
+
+        -- comparsion logic
+        local ln1 = content:match("([^\n]*)")
+        local versionnum = tonumber(string.split(ln1, "=")[2])
+
         local needsupdate = nil
-        
+
+        if not versionnum then
+            notify("failed to get version number")
+            return
+        end
+
+        if versionnum>pluginversion then
+            needsupdate = true
+        else
+            needsupdate = false
+        end
+
         if needsupdate then
-            -- writefile logic goes here
-            local writefilesuccess = nil
-            local failreason = nil
+            local writefilesuccess = pcall(function()
+                  return writefile()
+            end)
+            if not writefilesuccess then
+                nofity("no writefile", "Your executor enviroment does not support the writefile function")
+                return
+            else
+                writefile("t0kenhasdied.iy", content)
+            end
             if writefilesuccess then
                 notify("Dumped plugin to disc successfully, attempting reload...")
                 execCmd("reloadplugin t0kenhasdied")
             else
                 notify("writefile failed :( heres what we know: " .. failreason)
+                return
+            end
         else
             notify("No updates needed!")
         end
     elseif updatestatus == "failed" then
         notify("Fatal error: " .. reason)
+        return
     end
 end
 
