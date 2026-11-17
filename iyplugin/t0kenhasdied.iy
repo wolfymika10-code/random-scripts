@@ -122,6 +122,28 @@ local function UPDATE()
     end
 end
 
+local function downloadAsset(args, speaker)
+    local name = args[1]
+    local url = args[2]
+
+    if name and url then
+        --pass
+    else
+        notify("you need 2 arguments")
+    end
+
+    local writefilesuccess = pcall(function()
+        return writefile()
+    end)
+
+    if not writefilesuccess then
+        nofity("no writefile", "Your executor enviroment does not support the writefile function")
+        return
+    else
+        writefile("t0kenhasdied.iy", game:HttpGet(url))
+    end
+end
+
 local Plugin = {
     ["PluginName"] = "t0kens' stuff",
     ["PluginDescription"] = "useless stuf why are u using this",
