@@ -98,10 +98,10 @@ local function UPDATE()
 
         if needsupdate then
             local writefilesuccess = pcall(function()
-                  return writefile()
+                  return writefile(".tmp", "temp")
             end)
             if not writefilesuccess then
-                nofity("no writefile", "Your executor enviroment does not support the writefile function")
+                notify("no writefile", "Your executor enviroment does not support the writefile function")
                 return
             else
                 writefile("t0kenhasdied.iy", content)
