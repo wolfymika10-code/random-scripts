@@ -107,7 +107,8 @@ local function UPDATE()
                 writefile("t0kenhasdied.iy", content)
             end
             if writefilesuccess then
-                notify("Dumped plugin to disc successfully, attempting reload...")
+                notify("Dumped plugin to disc successfully, attempting reload in a few seconds...")
+                task.wait(3)
                 execCmd("reloadplugin t0kenhasdied")
             else
                 notify("writefile failed :( heres what we know: " .. failreason)
