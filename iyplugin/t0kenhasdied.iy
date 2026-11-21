@@ -26,6 +26,7 @@ local function liveleakify(args, speaker)
         local img = Instance.new("ImageLabel", ui)
         img.Image = "rbxassetid://130901207917297" -- public asset, praying it wont go
         img.Size = UDim2.new(0.25, 0, 0.35, 0) -- unchecked scales
+        img.BackgroundTransparency = 1
 
         return ui
     end
@@ -98,7 +99,7 @@ local function UPDATE()
 
         if needsupdate then
             local writefilesuccess = pcall(function()
-                  return writefile(".tmp", "temp")
+                writefile(".tmp", "temp") -- fixed return, im pretty sure writefile doesnt return anything
             end)
             if not writefilesuccess then
                 notify("no writefile", "Your executor enviroment does not support the writefile function")
@@ -134,7 +135,7 @@ local function downloadAsset(args, speaker)
     end
 
     local writefilesuccess = pcall(function()
-        return writefile()
+        writefile(".tmp", "temp")
     end)
 
     if not writefilesuccess then
