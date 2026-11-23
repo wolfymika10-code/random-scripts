@@ -10,7 +10,7 @@ local pluginversion=2
 -- this is a (virtual) MODULE script
 
 -- notes and shieeet:
--- none rn
+-- make five nights at furries 
 
 local leakifyconnection : RBXScriptSignal? = nil
 
@@ -38,7 +38,7 @@ local function liveleakify(args, speaker)
     local Cam = game.Workspace.Camera
     local MAGIC_FORMULA = CFrame.new(0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0, 1)
 
-    Run.RenderStepped:Connect(function()
+    leakifyconnection = Run.RenderStepped:Connect(function() -- this bug costed me so much hours, thank you luau
         if not hui:FindFirstChild("only sigma hackers can read this B)") then
             hwenTheGui()
         end
@@ -57,7 +57,7 @@ local function unleakify(args, speaker)
 end
 
 local function UPDATE()
-    -- please work on this tomorrow i beg you ( i did !!!)
+    -- installer isnt working for some reason
     local updatestatus = nil
     local reason = nil
 
