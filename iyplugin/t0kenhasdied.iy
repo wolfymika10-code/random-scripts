@@ -1,13 +1,4 @@
 local pluginversion=2
--- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
--- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
--- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
--- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
--- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
--- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
--- DO NOT EDIT THE LINE ABOVE THIS UNLESS RELEASING MAJOR UPDATE
-
--- this is a (virtual) MODULE script
 
 -- notes and shieeet:
 -- make five nights at furries 
@@ -15,7 +6,7 @@ local pluginversion=2
 --[[
 TODO
 
-add greyscale
+add greyscale to liveleak
 add universal aimbot
 add weld abuse system (may get patched by the time i do try but oh well)
 ]]
@@ -89,13 +80,29 @@ local function UPDATE()
         -- changed it a bit but its got the same idea really
 
         -- comparsion logic
-        local ln1 = content:match("([^\n]*)")
+
+        -- yes yes gpt coded dont care
+        local function findLineWithPattern(text, pattern)
+            -- Iterate through every line in the string (handling both LF and CRLF line endings)
+            for line in text:gmatch("[^\r\n]+") do
+                -- Check if the line contains your pattern
+                if line:match(pattern) then
+                    -- returns the first orrurance
+                    return line
+                end
+            end
+            
+            error("line not found")
+        end
+        
+        -- morning-after patch, will require a full reinstall :c
+        local ln1 = findLineWithPattern(content, "local pluginversion=")
         local versionnum = tonumber(string.split(ln1, "=")[2])
 
         local needsupdate = nil
 
         if not versionnum then
-            notify("failed to get version number, contact dev")
+            notify("failed to get version number, contact<<< dev")
             return
         end
 
@@ -158,6 +165,10 @@ local function downloadAsset(args, speaker)
     end
 end
 
+local function credit()
+    -- build the ui tomorrow
+end
+
 local Plugin = {
     ["PluginName"] = "t0kens' stuff",
     ["PluginDescription"] = "useless stuf why are u using this",
@@ -185,6 +196,12 @@ local Plugin = {
             ["Description"] = "downloads assets straight into your workspace folder (good for music, make sure to add the file extention",
             ["Aliases"] = {"dwnld"},
             ["Function"] = downloadAsset
+        },
+        ["t0kenscredits"] = {
+            ["Listname"] = "t0kenscredits",
+            ["Description"] = "links the credits to contributors and how to contact them!",
+            ["Aliases"] = {"tc", "t0kenc", "tcredits"},
+            ["Function"] = credits
         }
     }
 }
