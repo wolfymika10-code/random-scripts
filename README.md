@@ -18,6 +18,7 @@ Most of my scripts dont use Gui, check documentation to see the keybinds.
 
 ### I got a problem with my script.
 Post it in the Issues thing and I'll try to get it fixed ASAP. _<sub>As a reminder, it's just me working on it! + I'm a novice programmer after all</sub>_
+You're also completely welcome to send a merge request!
 
 # Tags
 as more scripts get added this list will get longer!
