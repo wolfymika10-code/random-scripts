@@ -12,10 +12,18 @@ local pluginversion=2
 -- notes and shieeet:
 -- make five nights at furries 
 
+--[[
+TODO
+
+add greyscale
+add universal aimbot
+add weld abuse system (may get patched by the time i do try but oh well)
+]]
+
 local leakifyconnection : RBXScriptSignal? = nil
 
 local function liveleakify(args, speaker)
-    local hui = gethui() -- not gonna pcall this because most normal exps have hui
+    local hui = gethui() -- not gonna pcall this because most normal exps have hui (hopefully)
 
     local function hwenTheGui()
         local ui = Instance.new("ScreenGui")
@@ -87,7 +95,7 @@ local function UPDATE()
         local needsupdate = nil
 
         if not versionnum then
-            notify("failed to get version number")
+            notify("failed to get version number, contact dev")
             return
         end
 
@@ -99,10 +107,10 @@ local function UPDATE()
 
         if needsupdate then
             local writefilesuccess = pcall(function()
-                writefile(".tmp", "temp") -- fixed return, im pretty sure writefile doesnt return anything
+                writefile(".tmp", "temp") -- fixed, writefile doesnt return anything
             end)
             if not writefilesuccess then
-                notify("no writefile", "Your executor enviroment does not support the writefile function")
+                notify("no writefile", "Your executor enviroment does not include the writefile function (check whatexpsare.online)")
                 return
             else
                 writefile("t0kenhasdied.iy", content)
@@ -111,15 +119,19 @@ local function UPDATE()
                 notify("Dumped plugin to disc successfully, attempting reload in a few seconds...")
                 task.wait(3)
                 execCmd("reloadplugin t0kenhasdied")
+                -- the reason this may not be working is because reload just...
+                -- ...resets it from memory rather than re-reading file itself...
+                -- ...check tommorrow if this is the reason why (just incase)...
+                -- ...read the infyiff source code if you gotta
             else
                 notify("writefile failed :( heres what we know: " .. failreason)
                 return
             end
         else
-            notify("No updates needed!")
+            notify("No outstanding updates.")
         end
     elseif updatestatus == "failed" then
-        notify("Fatal error: " .. reason)
+        notify("failed to get update: " .. reason)
         return
     end
 end
@@ -131,7 +143,7 @@ local function downloadAsset(args, speaker)
     if name and url then
         --pass
     else
-        notify("you need 2 arguments")
+        notify("you need 2 arguments to use download")
     end
 
     local writefilesuccess = pcall(function()
@@ -139,7 +151,7 @@ local function downloadAsset(args, speaker)
     end)
 
     if not writefilesuccess then
-        nofity("no writefile", "Your executor enviroment does not support the writefile function")
+        notify("no writefile", "Your executor enviroment does not include the writefile function (check whatexpsare.online)")
         return
     else
         writefile(name, game:HttpGet(url))
